@@ -9,7 +9,7 @@ export default class MemoryCompilerHost implements ts.CompilerHost {
     return ts.createSourceFile(filename, text, languageVersion);
   }
   getDefaultLibFileName = (options: ts.CompilerOptions) => 'lib.d.ts';
-  getDirectories = (path: string) => [];
+  getDirectories = (path: string): string[] => [];
 
   writeFile = (filename: string, data: string, writeByteOrderMark: boolean, onError?: (message: string) => void) => {}
   getCurrentDirectory = () => "";
